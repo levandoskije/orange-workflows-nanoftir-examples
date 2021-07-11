@@ -1,8 +1,7 @@
-# Point Spectrum Examples
+# Linescan Examples
 -------
-The spectrum of points is a simpler file to generate for this equipment.
 
-There are 3 possible file types:
+There are 2 possible file types:
 
  - Raw files, with extension \*.gsf
  - Spectra files, with extension \*.txt
@@ -54,10 +53,51 @@ How to open, second harmonic?
  - For normalization it is necessary to use the ***Preprocess Spectra*** widget. Input the experimental data from ***Select Rows*** in ***Preprocess Spectra***, and conect another input from reference data.
  - Open  ***Preprocess Spectra*** and click in *Add preprocessor*, select *Normalize Spectra* and check the box *Normalize by Reference* for Amplitude and *Normalize by Reference (Complex phase)* for phase.
 
-## How to visualized?
+## How to visualize?
+
+### 1. Colormaps by position
+
+  - In this case you need to use the ***Spectral Series*** widget.
+
+  - Conect the data from  ***Preprocess Spectra*** in ***Spectral Series***.
+
+  - Open the ***Spectral Series*** and now you can visualized the normalized data.
+
+  
+### 2. Individual spectra by position
 
   - In this case you need to use the ***Spectra*** widget.
 
-  - Conect the data from  ***Preprocess Spectra*** in ***Spectra***.
+  - Conect the data from ***Spectral Series*** in ***Spectra***.
+  
+  - Open the ***Spectral Series*** and click in the position of interest.
 
-  - Open the ***Spectra*** and now you can visualized the normalized data.
+  - Open the ***Spectra*** and now you can visualized the selected data.
+
+### 3. Colormaps by Wavenumber
+
+  - In this case before you use the ***Spectral Series*** widget. It is necessary made a transpose of de data.
+  
+  - Conect the data from  ***Preprocess Spectra*** in ***Transpose***.
+    - Open ***Transpose*** and *From variable* **column**.
+
+    - Conect a ***Edit Domain*** change de *Feature name* to type: *Numeric*.
+
+    - If you want, it is possible to change de *name* to Wavenumber.
+
+  - Conect the data from  ***Edit Domain*** in ***Spectral Series***.
+
+  - Open the ***Spectral Series*** and now you can visualized the transpose data.
+
+  
+### 2. Individual spectra by Wavenumber
+
+  - In this case you need to use the ***Spectra*** widget.
+
+      - Conect a ***Edit Domain*** change de *Feature name* to type: *Numeric*.
+
+  - Conect the data from ***Edit Domain*** in ***Spectra***.
+  
+  - Open the ***Spectral Series*** and click in the Wavenumber of interest.
+
+  - Open the ***Spectra*** and now you can visualized the selected data.

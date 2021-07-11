@@ -54,7 +54,7 @@ How to open, second harmonic?
  - For normalization it is necessary to use the ***Preprocess Spectra*** widget. Input the experimental data from ***Select Rows*** in ***Preprocess Spectra***, and conect another input from reference data.
  - Open  ***Preprocess Spectra*** and click in *Add preprocessor*, select *Normalize Spectra* and check the box *Normalize by Reference* for Amplitude and *Normalize by Reference (Complex phase)* for phase.
 
-## How to visualized?
+## How to visualize?
 
   - In this case you need to use the ***Spectra*** widget.
 

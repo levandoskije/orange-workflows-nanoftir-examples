@@ -1,8 +1,8 @@
-# Point Spectrum Examples
+# Hyperspectral Images Examples
 -------
-The spectrum of points is a simpler file to generate for this equipment.
+The Hypespectral Image is the complex file to generate for this equipment.
 
-There are 3 possible file types:
+There are 2 possible file types:
 
  - Raw files, with extension \*.gsf
  - Spectra files, with extension \*.txt
@@ -54,10 +54,23 @@ How to open, second harmonic?
  - For normalization it is necessary to use the ***Preprocess Spectra*** widget. Input the experimental data from ***Select Rows*** in ***Preprocess Spectra***, and conect another input from reference data.
  - Open  ***Preprocess Spectra*** and click in *Add preprocessor*, select *Normalize Spectra* and check the box *Normalize by Reference* for Amplitude and *Normalize by Reference (Complex phase)* for phase.
 
-## How to visualized?
+## How to visualize?
+
+### 1. Colormaps by position
+
+  - In this case you need to use the ***HyperSpectra*** widget.
+
+  - Conect the data from  ***Preprocess Spectra*** in ***HyperSpectra***.
+
+  - Open the ***HyperSpectra*** and now you can visualized the normalized data.
+
+  
+### 2. Individual spectra by position
 
   - In this case you need to use the ***Spectra*** widget.
 
-  - Conect the data from  ***Preprocess Spectra*** in ***Spectra***.
+  - Conect the data from ***HyperSpectra*** in ***Spectra***.
+  
+  - Open the ***HyperSpectra*** and click in the position of interest.
 
-  - Open the ***Spectra*** and now you can visualized the normalized data.
+  - Open the ***Spectra*** and now you can visualized the selected data.
